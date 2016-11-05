@@ -531,7 +531,9 @@
     // 检查内容更改
     this._prevContent = this.getContent();
 
-  
+    // 影藏markdown
+    if (this.markdown) this.markdown.init(this);
+
     // 当前页面
     if (this.config.stay) this.stay(this.config);
 
