@@ -55,6 +55,8 @@
 .txt-textarea{display:block;background:#f8f8f8;padding:20px;}
 .txt textarea{font-size:14px;border:none;background:none;width:100%;_height:200px;min-height:200px;resize:none;}
 
+
+
 @font-face {
     font-family: 'txt';
     src: url('font/txt.eot?370dad08');
