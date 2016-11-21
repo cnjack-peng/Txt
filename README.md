@@ -1,9 +1,6 @@
 # Txt
-新生代  轻量级web富文本框 , 使用简单。
-
 
 ### Directly on the preview
-
 
 ### Features
 
@@ -24,30 +21,33 @@ Move forward
 ```
 
 
-
-### 使用示例
-
 ![use Action](./use.png)
 
-      $(document).ready(function(){
-        var options = {
-            editor: document.getElementById('mdcontent'), // 编辑区域
-            class: 'txt', // 编辑区域样式
-            debug: true, //是否开启console debug
-            textarea: '<textarea name="content"></textarea>', //不支持contenteditable 的使用
-            linksInNewWindow: true ,
-            preview : true, // 右边预览
-            menuDom : 'nav2' // 工具区域的元素
-          }
-          var editorMd = new Txt(options);
-
-          });
-
-
-### 直接上预览图
-
-
 ![demo](./Txt.gif)
+
+
+    $(document).ready(function(){
+      var options = {
+          editor: document.getElementById('mdcontent'), // Edit the area
+          class: 'txt', // Edit the  style
+          debug: true, //switch console debug
+          textarea: '<textarea name="content"></textarea>', // The use of contenteditable is not supported or not
+
+          linksInNewWindow: true ,
+          preview : true, // preview area
+          menuDom : 'nav2' // The elements of the tool area
+        }
+        var editorMd = new Txt(options);
+    });
+
+
+
+
+#Txt
+
+新生代  轻量级web富文本框 , 使用简单。
+
+
 
 ### 功能
 
@@ -67,6 +67,17 @@ Move forward
 
 ```
 
-
-
 ### 参数解析
+
+$(document).ready(function(){
+  var options = {
+      editor: document.getElementById('mdcontent'), // 编辑区域
+    class: 'txt', // 编辑区域样式
+      debug: true, //是否开启console debug
+      textarea: '<textarea name="content"></textarea>', //不支持contenteditable 的使用
+      linksInNewWindow: true ,
+      preview : true, // 右边预览
+      menuDom : 'nav2' // 工具区域的元素
+    }
+    var editorMd = new Txt(options);
+});
