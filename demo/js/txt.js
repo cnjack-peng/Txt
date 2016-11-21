@@ -1,4 +1,3 @@
-
 (function(root, doc) {
 
   var Txt, debugMode, selection, utils = {} , doBackList , doGoList ;
@@ -86,7 +85,7 @@
       stayMsg: 'Are you going to leave here?',
       textarea: '<textarea name="content"></textarea>',
       list: [
-        'doback','dogo','blockquote', 'h2', 'h3', 'p', 'code', 'insertorderedlist', 'insertunorderedlist', 'inserthorizontalrule',
+        'doback','dogo','blockquote', 'h1','h2', 'h3','h4',  'p', 'code', 'insertorderedlist', 'insertunorderedlist', 'inserthorizontalrule',
         'indent', 'outdent', 'bold', 'italic', 'underline', 'createlink', 'insertimage'
       ],
       titles: {},
@@ -153,6 +152,14 @@
       return commandOverall(ctx, tag, value);
     }
   }
+
+
+  function initPreview(ctx){
+    var preView = $('<div></div>');
+    preView.html('<div>qwwqqw</div>');
+    $('#mdcontent').after(preView)
+  }
+
 
   function initToolbar(ctx) {
     var icons = '', inputStr = '<input class="txt-input" placeholder="http://" />' , _icon = '';
@@ -255,6 +262,14 @@
 
     // 检查 lineBreakReg
     addListener(ctx, editor, 'keydown', function(e) {
+      console.log(`keydown `);
+
+      if (e.which == 13) {
+      root.doBackList.unshift($('#mdcontent').html());
+      // console.log(doBackList);
+    }
+
+
       editor.classList.remove('txt-placeholder');
       if (e.which !== 13 || e.shiftKey) return;
       var node = getNode(ctx, true);
@@ -525,6 +540,10 @@
     // 初始化 Toolbar menu
     initToolbar(this);
 
+    // 初始化 预览图
+    initPreview(this);
+
+
     // 初始化事件
     initEvents(this);
 
@@ -776,6 +795,13 @@
 
     return this;
   };
+
+
+  //显示预览
+  Txt.prototype.preView = function(){
+
+  }
+
 
   // 显示menu
   Txt.prototype.menu = function() {
