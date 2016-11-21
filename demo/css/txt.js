@@ -265,7 +265,8 @@ export default StyleSheet.create({
         "borderBottomRightRadius": 3
     },
     "txt-icon:hover": {
-        "background": "#000"
+        "background": "#000",
+        "color": "rgba(40, 213, 51, 1.00)"
     },
     "txt-iconactive": {
         "color": "rgba(40, 213, 51, 1.00)",
@@ -492,6 +493,9 @@ export default StyleSheet.create({
     },
     "txt-menu icon-p:before": {
         "content": "'P'"
+    },
+    "txt-menu icon-md:before": {
+        "content": "'Md'"
     },
     "txt-menu icon-insertimage:before": {
         "width": 1.8,

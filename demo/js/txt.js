@@ -1,6 +1,6 @@
 (function(root, doc) {
 
-  var Txt, debugMode, selection, utils = {} , doBackList , doGoList ;
+  var Txt, debugMode, selection, utils = {} , doBackList , doGoList ,mdSwitchHtml , mdSwitch = false;
   var toString = Object.prototype.toString;
   var slice = Array.prototype.slice;
 
@@ -86,7 +86,7 @@
       textarea: '<textarea name="content"></textarea>',
       list: [
         'doback','dogo','blockquote', 'h1','h2', 'h3','h4', 'h5', 'p', 'code', 'insertorderedlist', 'insertunorderedlist', 'inserthorizontalrule',
-        'indent', 'outdent', 'bold', 'italic', 'underline', 'createlink', 'insertimage'
+        'indent', 'outdent', 'bold', 'italic', 'underline', 'createlink', 'md' ,'insertimage'
       ],
       titles: {},
       cleanAttrs: ['id', 'class', 'style', 'name'],
@@ -198,9 +198,7 @@
         icons += `<i class="${klass}" data-action="${name}" title="${title}"></i>`
 
       }, true);
-      console.warn(`&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&`);
-      console.warn(toolList);
-      console.warn(`&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&`);
+
       if (toolList.indexOf('createlink') >= 0 || toolList.indexOf('insertimage') >= 0)
         icons += inputStr;
     } else if (ctx._toolbar.querySelectorAll('[data-action=createlink]').length ||
@@ -214,7 +212,7 @@
       ctx._menu.innerHTML = icons;
       ctx._inputBar = ctx._menu.querySelector('input');
       toggleNode(ctx._menu, true);
-      doc.getElementById('nav2').appendChild(ctx._menu)
+      doc.getElementById(ctx.config.menuDom).appendChild(ctx._menu)
     }
     if (ctx._toolbar && ctx._inputBar) toggleNode(ctx._inputBar);
   }
@@ -658,6 +656,14 @@
     return this;
   };
 
+
+  Txt.prototype.doMd = function(ctx) {
+    !mdSwitch && (mdSwitchHtml = $(ctx.config.editor).html())
+    $(ctx.config.editor).html(mdSwitch ? mdSwitchHtml : ctx.toMd())
+    mdSwitch = !mdSwitch
+  };
+
+
   Txt.prototype.doBack = function() {
     var doBackList = root.doBackList
     var doGoList = root.doGoList
@@ -695,6 +701,7 @@
     if(root.doBackList == null){
       root.doBackList = []
     }
+
     switch (name) {
       case 'doback':
         this.doBack()
@@ -704,6 +711,10 @@
         this.doGo()
         return
         break;
+        case 'md':
+          this.doMd(this)
+          return
+          break;
       default:
 
     }
