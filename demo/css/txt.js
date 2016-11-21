@@ -7,7 +7,7 @@ const {width, height, scale} = Dimensions.get("window"),
 
 export default StyleSheet.create({
     "txt": {
-        "fontSize": 1.16,
+        "fontSize": 0.8,
         "lineHeight": 1.45,
         "color": "#331",
         "fontFamily": "'微软雅黑'",
@@ -152,37 +152,37 @@ export default StyleSheet.create({
     "txt h1": {
         "marginBottom": 16,
         "fontWeight": "700",
-        "lineHeight": 1.2,
+        "lineHeight": 1.45,
         "fontSize": 2
     },
     "txt h2": {
         "marginBottom": 16,
         "fontWeight": "700",
-        "lineHeight": 1.2,
+        "lineHeight": 1.45,
         "fontSize": 1.8
     },
     "txt h3": {
         "marginBottom": 16,
         "fontWeight": "700",
-        "lineHeight": 1.2,
+        "lineHeight": 1.45,
         "fontSize": 1.6
     },
     "txt h4": {
         "marginBottom": 16,
         "fontWeight": "700",
-        "lineHeight": 1.2,
+        "lineHeight": 1.45,
         "fontSize": 1.4
     },
     "txt h5": {
         "marginBottom": 16,
         "fontWeight": "700",
-        "lineHeight": 1.2,
+        "lineHeight": 1.45,
         "fontSize": 1.2
     },
     "txt h6": {
         "marginBottom": 16,
         "fontWeight": "700",
-        "lineHeight": 1.2,
+        "lineHeight": 1.45,
         "fontSize": 1.2
     },
     "txt-ul": {
@@ -276,8 +276,9 @@ export default StyleSheet.create({
         "outline": "none"
     },
     "txt-menu txt-input": {
-        "backgroundColor": "RGBA(40, 213, 51, 1.00)",
-        "height": 36
+        "backgroundColor": "RGBA(0, 0, 0, 1.00)",
+        "height": 36,
+        "color": "#fff"
     },
     "txt-textarea": {
         "display": "block",

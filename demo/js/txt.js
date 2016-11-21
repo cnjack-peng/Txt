@@ -260,7 +260,7 @@
         if (selecting) updateStatus(100);
         selecting = false;
       });
-
+      
 
       // 离开编辑器 menu 隐藏
       outsideClick = function(e) {
