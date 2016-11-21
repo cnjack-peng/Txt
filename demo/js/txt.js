@@ -169,7 +169,7 @@
         _html += "<a href='#" + ('previewtoHref'+index) + "' class='txt-" + item.tagName.toLowerCase() + " '>" + $(item).text() + "</a>"
       })
       preView.html(_html);
-      $(ctx.config.editor).after(preView)
+      ctx.config.preview && $(ctx.config.editor).after(preView)
       $("ol").each(function () {
           var $that = $(this);
           $($that).find('li').each(function (index) {

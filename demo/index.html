@@ -26,20 +26,17 @@
   <script type="text/javascript" src="./js/marked.js"></script>
   <script type="text/javascript" src="./js/txt.js"></script>
   <script type="text/javascript">
-    // var mdStr = "## sdddffdfds \n ### dfddfdds"
     $(document).ready(function(){
       var options = {
-        editor: document.getElementById('mdcontent'),
-        class: 'txt',
-        debug: true,
-        textarea: '<textarea name="content"></textarea>',
+        editor: document.getElementById('mdcontent'), // 编辑区域
+        class: 'txt', // 编辑区域样式
+        debug: true, //是否开启console debug
+        textarea: '<textarea name="content"></textarea>', //不支持contenteditable 的使用
         linksInNewWindow: true ,
-        preview : true,
-        menuDom : 'nav2'
+        preview : true, // 右边预览
+        menuDom : 'nav2' // 工具区域的元素
       }
-   var editor = new Txt(options);
-
-  //  $('#mdcontent').html(marked(mdStr))
+   var editorMd = new Txt(options);
 
  });
   </script>

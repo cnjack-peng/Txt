@@ -25,11 +25,25 @@ Move forward
 
 
 
+### 使用示例
 
-<code>
-execcommand
+![use Action](./use.png)
 
-</code>
+      $(document).ready(function(){
+        var options = {
+            editor: document.getElementById('mdcontent'), // 编辑区域
+            class: 'txt', // 编辑区域样式
+            debug: true, //是否开启console debug
+            textarea: '<textarea name="content"></textarea>', //不支持contenteditable 的使用
+            linksInNewWindow: true ,
+            preview : true, // 右边预览
+            menuDom : 'nav2' // 工具区域的元素
+          }
+          var editorMd = new Txt(options);
+
+          });
+
+
 ### 直接上预览图
 
 
