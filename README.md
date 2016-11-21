@@ -3,7 +3,33 @@
 
 
 
+
+
 ### 直接上预览图
+
+
+### Features
+
+`` `
+Move forward
+2. Backward
+3. blockquote
+4. h1, h2, h3, h4, h5
+5. Plain text
+6. Ordered list
+7. Unordered list
+8. Indent
+9, bold, down, italic
+10. Text links
+11. MD View
+12. Picture added
+
+`` `
+
+
+
+### Directly on the preview
+
 
 ![demo](./Txt.gif)
 
