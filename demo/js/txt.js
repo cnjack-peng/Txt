@@ -153,14 +153,9 @@
     }
   }
 
-
-
   function getAllTag(ctx){
     return $(ctx.config.editor).find('h1 , h2 ,h3 ,h4 ,h5 ,H1 ,H2 , H3 ,H4 ,H5')
   }
-
-
-
 
 
   function initPreview(ctx){
@@ -219,7 +214,6 @@
       ctx._menu.innerHTML = icons;
       ctx._inputBar = ctx._menu.querySelector('input');
       toggleNode(ctx._menu, true);
-      console.warn(doc.getElementById('nav2'));
       doc.getElementById('nav2').appendChild(ctx._menu)
     }
     if (ctx._toolbar && ctx._inputBar) toggleNode(ctx._inputBar);
@@ -260,7 +254,7 @@
         if (selecting) updateStatus(100);
         selecting = false;
       });
-      
+
 
       // 离开编辑器 menu 隐藏
       outsideClick = function(e) {
@@ -578,6 +572,12 @@
 
     // 初始化事件
     initEvents(this);
+
+
+
+
+
+
 
     // 检查内容更改
     this._prevContent = this.getContent();

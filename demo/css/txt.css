@@ -182,12 +182,12 @@
 .txt-menu .icon-undo:before { content: '\e817'; } /* '' */
 .txt-menu .icon-code:before { content: '\e816'; } /* '' */
 .txt-menu .icon-pre:before { content: '\e816'; } /* '' */
-.txt-menu .icon-unlink:before { content: '\e811'; } /* '' */
+.txt-menu .icon-unlink:before { content: 'Link'; } /* '' */
 .txt-menu .icon-superscript:before { content: '\e808'; } /* '' */
 .txt-menu .icon-subscript:before { content: '\e809'; } /* '' */
 .txt-menu .icon-inserthorizontalrule:before { content: '\e818'; } /* '' */
 .txt-menu .icon-pin:before { content: '\e812'; } /* '' */
-.txt-menu .icon-createlink:before { content: '\e810'; } /* '' */
+.txt-menu .icon-createlink:before { content: 'Link'; } /* '' */
 .txt-menu .icon-h1:before { content: 'H1'; }
 .txt-menu .icon-h2:before { content: 'H2'; }
 .txt-menu .icon-h3:before { content: 'H3'; }

@@ -455,7 +455,7 @@ export default StyleSheet.create({
         "content": "'\\e816'"
     },
     "txt-menu icon-unlink:before": {
-        "content": "'\\e811'"
+        "content": "'Link'"
     },
     "txt-menu icon-superscript:before": {
         "content": "'\\e808'"
@@ -470,7 +470,7 @@ export default StyleSheet.create({
         "content": "'\\e812'"
     },
     "txt-menu icon-createlink:before": {
-        "content": "'\\e810'"
+        "content": "'Link'"
     },
     "txt-menu icon-h1:before": {
         "content": "'H1'"
