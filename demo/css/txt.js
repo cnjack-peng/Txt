@@ -7,17 +7,18 @@ const {width, height, scale} = Dimensions.get("window"),
 
 export default StyleSheet.create({
     "txt": {
-        "font": "400 1.16em/1.45 Palatino, Optima, Georgia, serif",
+        "fontSize": 14,
         "color": "#331",
+        "fontFamily": "'微软雅黑'",
         "position": "relative"
     },
     "txt-menu": {
-        "font": "400 1.16em/1.45 Palatino, Optima, Georgia, serif",
+        "fontSize": 14,
         "color": "#331",
+        "fontFamily": "'微软雅黑'",
         "minWidth": 320,
         "position": "relative",
         "top": 0,
-        "fontSize": 14,
         "lineHeight": 1,
         "left": 0,
         "whiteSpace": "nowrap",
@@ -27,9 +28,9 @@ export default StyleSheet.create({
         "backgroundColor": "#000"
     },
     "txt-input": {
-        "font": "400 1.16em/1.45 Palatino, Optima, Georgia, serif",
-        "color": "#000",
         "fontSize": 14,
+        "color": "#000",
+        "fontFamily": "arial, sans-serif",
         "lineHeight": 20,
         "position": "absolute",
         "width": "100%",
@@ -39,13 +40,12 @@ export default StyleSheet.create({
         "background": "#333",
         "border": "none",
         "textAlign": "center",
-        "display": "none",
-        "fontFamily": "arial, sans-serif"
+        "display": "none"
     },
     "txt textarea": {
-        "font": "400 1.16em/1.45 Palatino, Optima, Georgia, serif",
-        "color": "#331",
         "fontSize": 14,
+        "color": "#331",
+        "fontFamily": "'微软雅黑'",
         "border": "none",
         "background": "none",
         "width": "100%",
@@ -92,13 +92,15 @@ export default StyleSheet.create({
         "verticalAlign": "baseline"
     },
     "txt hr": {
-        "border": "none",
+        "border": 0,
         "borderBottom": "1px solid #cfcfcf",
-        "marginBottom": 25,
+        "marginBottom": 21,
         "Color": "pink",
         "Filter": "chroma(color=pink)",
         "height": 10,
-        "Margin": "-7px 0 15px"
+        "Margin": "-7px 0 15px",
+        "marginTop": 21,
+        "borderTop": "3px solid mediumseagreen"
     },
     "txt small": {
         "fontSize": 0.8,
@@ -563,6 +565,21 @@ export default StyleSheet.create({
         "content": "](\" attr(href) \")",
         "color": "#ddd"
     },
+    "txt hr::after": {
+        "fontFamily": "SegoeUI, 'Segoe UI', \"Open Sans\",Helvetica",
+        "content": "END",
+        "textAlign": "center",
+        "width": 80,
+        "height": 25,
+        "backgroundColor": "white",
+        "fontSize": 20,
+        "color": "mediumseagreen",
+        "fontWeight": "bold",
+        "display": "inline-block",
+        "position": "relative",
+        "top": -20,
+        "left": "45%"
+    },
     "txt-placeholder:after": {
         "position": "absolute",
         "top": 0,
@@ -588,33 +605,37 @@ export default StyleSheet.create({
         "paddingLeft": 0
     },
     "txt-preview div": {
-        "font": "12px/24px 'Aril'",
+        "font": "0.8em/1.6em '微软雅黑'",
         "whiteSpace": "nowrap",
         "textOverflow": "ellipsis",
         "overflow": "hidden"
     },
+    "txt-preview div:hover": {
+        "opacity": 0.5,
+        "cursor": "pointer"
+    },
     "txt-preview txt-h1": {
-        "marginLeft": 8,
+        "paddingLeft": 8,
         "color": "#E1BBFD",
         "width": 122
     },
     "txt-preview txt-h2": {
-        "marginLeft": 16,
+        "paddingLeft": 16,
         "color": "#FDFF7C",
         "width": 114
     },
     "txt-preview txt-h3": {
-        "marginLeft": 24,
+        "paddingLeft": 24,
         "color": "#C7FF81",
         "width": 106
     },
     "txt-preview txt-h4": {
-        "marginLeft": 32,
+        "paddingLeft": 32,
         "color": "#88C8EC",
         "width": 98
     },
     "txt-preview txt-h5": {
-        "marginLeft": 40,
+        "paddingLeft": 40,
         "color": "#FFC3E9",
         "width": 90
     }

@@ -162,18 +162,22 @@
 
 
 
+
   function initPreview(ctx){
-    $('#txt-preview').remove()
-    var preView = $('<div id="txt-preview" class="txt-preview"></div>');
-    var tags = getAllTag(ctx)
-    var _html = ''
-    tags.map(function(index , item){
-      _html += "<div class='txt-" + item.tagName.toLowerCase() + " '>" + $(item).text() + "</div>"
-      console.log(item);
-      console.log(item.tagName.toLowerCase());
-    })
-    preView.html(_html);
-    $('#mdcontent').after(preView)
+    setTimeout(function(){
+      $('#txt-preview').remove()
+      var preView = $('<div id="txt-preview" class="txt-preview"></div>');
+      var tags = getAllTag(ctx)
+      var _html = ''
+      tags.map(function(index , item){
+        _html += "<div class='txt-" + item.tagName.toLowerCase() + " '>" + $(item).text() + "</div>"
+        console.log(item);
+        console.log(item.tagName.toLowerCase());
+      })
+      preView.html(_html);
+      $('#mdcontent').after(preView)
+    }.bind(this),0)
+
   }
 
 
@@ -247,6 +251,8 @@
         if (selecting) updateStatus(100);
         selecting = false;
       });
+
+
       // 离开编辑器 menu 隐藏
       outsideClick = function(e) {
         if (ctx._menu && !containsNode(editor, e.target) && !containsNode(ctx._menu, e.target)) {
@@ -313,7 +319,7 @@
 
       console.warn();
       var node = e.target, action;
-
+      initPreview(ctx)
       while (node !== toolbar && !(action = node.getAttribute('data-action'))) {
         node = node.parentNode;
       }
@@ -332,6 +338,7 @@
       if (ctx._menu.style.display === 'none') return;
 
       setTimeout(function() { input.focus(); }, 400);
+
       var createlink = function() {
         var inputValue = input.value;
 

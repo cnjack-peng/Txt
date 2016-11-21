@@ -1,6 +1,6 @@
 
 /* basic reset */
-.txt, .txt-menu, .txt-input, .txt textarea{font:400 1.16em/1.45 Palatino, Optima, Georgia, serif;color:#331;}
+.txt, .txt-menu, .txt-input, .txt textarea{font-size : 14px ;color:#331; font-family: '微软雅黑';}
 .txt:focus{outline:none;}
 .txt fieldset, img {border: 0;}
 .txt blockquote{padding-left:10px;border-left:4px solid rgba(40, 213, 51, 1.00);}
@@ -183,6 +183,29 @@
 .txt.hinted a:before {content: "["; color: #ddd; }
 .txt.hinted a:after { content: "](" attr(href) ")"; color: #ddd; }
 
+.txt hr {
+      margin-top: 21px;
+      margin-bottom: 21px;
+      border: 0;
+      border-top: 3px solid mediumseagreen;
+
+
+    }
+.txt hr::after {
+      font-family: SegoeUI, 'Segoe UI', "Open Sans",Helvetica;
+      content: "END";
+      text-align: center;
+      width: 80px;
+      height: 25px;
+      background-color: white;
+      font-size: 20px;
+      color: mediumseagreen;
+      font-weight: bold;
+      display: inline-block;
+      position: relative;
+      top: -20px;
+      left: 45%;
+}
 .txt-placeholder:after { position: absolute; top: 0; left: 0; content: attr(data-placeholder); color: #fff; cursor: text; }
 nav .tools-height i { height: 55px;  line-height: 60px;}
 .txt-preview {
@@ -196,33 +219,37 @@ nav .tools-height i { height: 55px;  line-height: 60px;}
 
 }
 .txt-preview div {
-  font : 12px/24px 'Aril';
+  font : 0.8em/1.6em '微软雅黑';
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.txt-preview div:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .txt-preview .txt-h1 {
-  margin-left: 8px;
+  padding-left: 8px;
   color: #E1BBFD;
   width: 122px;
 }
 .txt-preview .txt-h2 {
-  margin-left: 16px;
+  padding-left: 16px;
   color: #FDFF7C;
   width: 114px;
 }
 .txt-preview .txt-h3 {
-  margin-left: 24px;
+  padding-left: 24px;
   color: #C7FF81;
   width: 106px;
 }
 .txt-preview .txt-h4 {
-  margin-left: 32px;
+  padding-left: 32px;
   color: #88C8EC;
   width: 98px;
 }
 .txt-preview .txt-h5 {
-  margin-left: 40px;
+  padding-left: 40px;
   color: #FFC3E9;
   width: 90px;
 
