@@ -1,6 +1,6 @@
 
 /* basic reset */
-.txt, .txt-menu, .txt-input, .txt textarea{font-size : 14px ;color:#331; font-family: '微软雅黑';}
+.txt, .txt-menu, .txt-input, .txt textarea{font-size : 1.16em; line-height: 1.45em ;color:#331; font-family: '微软雅黑';}
 .txt:focus{outline:none;}
 .txt fieldset, img {border: 0;}
 .txt blockquote{padding-left:10px;border-left:4px solid rgba(40, 213, 51, 1.00);}
@@ -38,7 +38,7 @@
   background: transparent;
   background-image: none;
 }
-.txt-menu { min-width: 320px; position: relative; top: -5px !important;}
+.txt-menu { min-width: 320px; position: fixed; width: 100%;}
 .txt-menu, .txt-input{font-size:14px;line-height:1;}
 .txt-menu{left:0;top:0;white-space:nowrap;opacity:0.6;height:36px;z-index:1000; background-color: #000;}
 /*.txt-menu:after {top:100%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;}*/
@@ -51,7 +51,7 @@
 .txt-icon.active{color:rgba(40, 213, 51, 1.00);background:#000;box-shadow:inset 2px 2px 4px #000;}
 .txt-input{position:absolute;width:100%;left:0;top:0;height:36px;line-height:20px;background:#333;color:#000;border:none;text-align:center;display:none;font-family:arial, sans-serif;}
 .txt-input:focus{outline:none;}
-.txt-menu .txt-input { background-color: #fff; height: 54px;}
+.txt-menu .txt-input { background-color: RGBA(40, 213, 51, 1.00); height: 36px;}
 .txt-textarea{display:block;background:#f8f8f8;padding:20px;}
 .txt textarea{font-size:14px;border:none;background:none;width:100%;_height:200px;min-height:200px;resize:none;}
 
@@ -91,6 +91,75 @@
   -moz-transform:rotateY(180deg); 	/* Firefox */
   -webkit-transform:rotateY(180deg); /* Safari 和 Chrome */
   -o-transform:rotateY(180deg);
+}
+.txt ol {list-style: none;}
+.txt ol li::before {
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    color: rgba(40, 213, 51, 1.00);
+    font-weight: bold;
+    text-align: left;
+}
+.txt ol .liNum-0::before {
+  content: "1. "
+}
+.txt ol .liNum-1::before {
+  content: "2. "
+}
+.txt ol .liNum-2::before {
+  content: "3. "
+}
+.txt ol .liNum-3::before {
+  content: "4. "
+}
+.txt ol .liNum-4::before {
+  content: "5. "
+}
+.txt ol .liNum-5::before {
+  content: "6. "
+}
+.txt ol .liNum-6::before {
+  content: "7. "
+}
+.txt ol .liNum-7::before {
+  content: "8. "
+}
+.txt ol .liNum-7::before {
+  content: "9. "
+}
+.txt ol .liNum-9::before {
+  content: "10. "
+}
+.txt ol .liNum-10::before {
+  content: "11. "
+}
+.txt ol .liNum-11::before {
+  content: "12. "
+}
+.txt ol .liNum-12::before {
+  content: "13. "
+}
+.txt ol .liNum-13::before {
+  content: "14. "
+}
+.txt ol .liNum-14::before {
+  content: "15. "
+}
+.txt ol .liNum-15::before {
+  content: "16. "
+}
+.txt ol .liNum-16::before {
+  content: "17. "
+}
+.txt ol .liNum-17::before {
+  content: "18. "
+}
+.txt ol .liNum-18::before {
+  content: "19. "
+}
+.txt ol .liNum-19::before {
+  content: "20. "
 }
 .txt-menu .icon-doback:before { content: '\e817'; }
 .txt-menu .icon-location:before { content: '\e815'; } /* '' */
@@ -203,7 +272,7 @@
       font-weight: bold;
       display: inline-block;
       position: relative;
-      top: -20px;
+      top: -26px;
       left: 45%;
 }
 .txt-placeholder:after { position: absolute; top: 0; left: 0; content: attr(data-placeholder); color: #fff; cursor: text; }
@@ -211,20 +280,23 @@ nav .tools-height i { height: 55px;  line-height: 60px;}
 .txt-preview {
   position: fixed;
   width: 120px;
-  height: 400px;
+  height: 412px;
   background-color: rgba(25, 15, 15, 0.39);
-  top: 31px;
+  top: 36px;
   right: 0px;
   padding: 10px 10px 10px 0;
+  overflow-y: scroll;
 
 }
-.txt-preview div {
+.txt-preview a {
+  display: block;
   font : 0.8em/1.6em '微软雅黑';
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  text-decoration: none;
 }
-.txt-preview div:hover {
+.txt-preview a:hover {
   opacity: 0.5;
   cursor: pointer;
 }

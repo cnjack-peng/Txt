@@ -85,7 +85,7 @@
       stayMsg: 'Are you going to leave here?',
       textarea: '<textarea name="content"></textarea>',
       list: [
-        'doback','dogo','blockquote', 'h1','h2', 'h3','h4',  'p', 'code', 'insertorderedlist', 'insertunorderedlist', 'inserthorizontalrule',
+        'doback','dogo','blockquote', 'h1','h2', 'h3','h4', 'h5', 'p', 'code', 'insertorderedlist', 'insertunorderedlist', 'inserthorizontalrule',
         'indent', 'outdent', 'bold', 'italic', 'underline', 'createlink', 'insertimage'
       ],
       titles: {},
@@ -145,7 +145,7 @@
   }
 
   function commandLink(ctx, tag, value) {
-    if (this && this.config.linksInNewWindow) {
+    if (this && this.config && this.config.linksInNewWindow) {
       value = '< a href="' + value + '" target="_blank">' + (selection.toString()) + '</a>';
       return commandOverall(ctx, 'insertHTML', value);
     } else {
@@ -170,12 +170,21 @@
       var tags = getAllTag(ctx)
       var _html = ''
       tags.map(function(index , item){
-        _html += "<div class='txt-" + item.tagName.toLowerCase() + " '>" + $(item).text() + "</div>"
+        $(item).attr('id','previewtoHref'+index)
+        _html += "<a href='#" + ('previewtoHref'+index) + "' class='txt-" + item.tagName.toLowerCase() + " '>" + $(item).text() + "</a>"
         console.log(item);
         console.log(item.tagName.toLowerCase());
       })
       preView.html(_html);
       $('#mdcontent').after(preView)
+      $("ol").each(function () {
+          var $that = $(this);
+          $($that).find('li').each(function (index) {
+              $(this).addClass("liNum-" + index)
+          })
+      });
+
+
     }.bind(this),0)
 
   }

@@ -7,20 +7,22 @@ const {width, height, scale} = Dimensions.get("window"),
 
 export default StyleSheet.create({
     "txt": {
-        "fontSize": 14,
+        "fontSize": 1.16,
+        "lineHeight": 1.45,
         "color": "#331",
         "fontFamily": "'微软雅黑'",
         "position": "relative"
     },
     "txt-menu": {
         "fontSize": 14,
+        "lineHeight": 1,
         "color": "#331",
         "fontFamily": "'微软雅黑'",
         "minWidth": 320,
-        "position": "relative",
-        "top": 0,
-        "lineHeight": 1,
+        "position": "fixed",
+        "width": "100%",
         "left": 0,
+        "top": 0,
         "whiteSpace": "nowrap",
         "opacity": 0.6,
         "height": 36,
@@ -29,9 +31,9 @@ export default StyleSheet.create({
     },
     "txt-input": {
         "fontSize": 14,
+        "lineHeight": 20,
         "color": "#000",
         "fontFamily": "arial, sans-serif",
-        "lineHeight": 20,
         "position": "absolute",
         "width": "100%",
         "left": 0,
@@ -44,6 +46,7 @@ export default StyleSheet.create({
     },
     "txt textarea": {
         "fontSize": 14,
+        "lineHeight": 1.45,
         "color": "#331",
         "fontFamily": "'微软雅黑'",
         "border": "none",
@@ -135,7 +138,7 @@ export default StyleSheet.create({
     "txt ol": {
         "marginBottom": 14,
         "marginLeft": 1.2,
-        "listStyle": "decimal"
+        "listStyle": "none"
     },
     "txt dl": {
         "marginBottom": 14
@@ -273,8 +276,8 @@ export default StyleSheet.create({
         "outline": "none"
     },
     "txt-menu txt-input": {
-        "backgroundColor": "#fff",
-        "height": 54
+        "backgroundColor": "RGBA(40, 213, 51, 1.00)",
+        "height": 36
     },
     "txt-textarea": {
         "display": "block",
@@ -321,6 +324,71 @@ export default StyleSheet.create({
         "MozTransform": "rotateY(180deg)",
         "WebkitTransform": "rotateY(180deg)",
         "OTransform": "rotateY(180deg)"
+    },
+    "txt ol li::before": {
+        "width": 30,
+        "height": 30,
+        "fontSize": 24,
+        "color": "rgba(40, 213, 51, 1.00)",
+        "fontWeight": "bold",
+        "textAlign": "left"
+    },
+    "txt ol liNum-0::before": {
+        "content": "1. "
+    },
+    "txt ol liNum-1::before": {
+        "content": "2. "
+    },
+    "txt ol liNum-2::before": {
+        "content": "3. "
+    },
+    "txt ol liNum-3::before": {
+        "content": "4. "
+    },
+    "txt ol liNum-4::before": {
+        "content": "5. "
+    },
+    "txt ol liNum-5::before": {
+        "content": "6. "
+    },
+    "txt ol liNum-6::before": {
+        "content": "7. "
+    },
+    "txt ol liNum-7::before": {
+        "content": "9. "
+    },
+    "txt ol liNum-9::before": {
+        "content": "10. "
+    },
+    "txt ol liNum-10::before": {
+        "content": "11. "
+    },
+    "txt ol liNum-11::before": {
+        "content": "12. "
+    },
+    "txt ol liNum-12::before": {
+        "content": "13. "
+    },
+    "txt ol liNum-13::before": {
+        "content": "14. "
+    },
+    "txt ol liNum-14::before": {
+        "content": "15. "
+    },
+    "txt ol liNum-15::before": {
+        "content": "16. "
+    },
+    "txt ol liNum-16::before": {
+        "content": "17. "
+    },
+    "txt ol liNum-17::before": {
+        "content": "18. "
+    },
+    "txt ol liNum-18::before": {
+        "content": "19. "
+    },
+    "txt ol liNum-19::before": {
+        "content": "20. "
     },
     "txt-menu icon-doback:before": {
         "content": "'\\e817'"
@@ -577,7 +645,7 @@ export default StyleSheet.create({
         "fontWeight": "bold",
         "display": "inline-block",
         "position": "relative",
-        "top": -20,
+        "top": -26,
         "left": "45%"
     },
     "txt-placeholder:after": {
@@ -595,22 +663,25 @@ export default StyleSheet.create({
     "txt-preview": {
         "position": "fixed",
         "width": 120,
-        "height": 400,
+        "height": 412,
         "backgroundColor": "rgba(25, 15, 15, 0.39)",
-        "top": 31,
+        "top": 36,
         "right": 0,
         "paddingTop": 10,
         "paddingRight": 10,
         "paddingBottom": 10,
-        "paddingLeft": 0
+        "paddingLeft": 0,
+        "overflowY": "scroll"
     },
-    "txt-preview div": {
+    "txt-preview a": {
+        "display": "block",
         "font": "0.8em/1.6em '微软雅黑'",
         "whiteSpace": "nowrap",
         "textOverflow": "ellipsis",
-        "overflow": "hidden"
+        "overflow": "hidden",
+        "textDecoration": "none"
     },
-    "txt-preview div:hover": {
+    "txt-preview a:hover": {
         "opacity": 0.5,
         "cursor": "pointer"
     },
