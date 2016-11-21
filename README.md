@@ -1,3 +1,7 @@
+    You can download the demo to modify and experience the features
+    你可以下载demo去修改和体验功能
+    あなたは、機能を変更するには、デモや経験をダウンロードすることができます
+
 # Txt
 
 ### Directly on the preview
