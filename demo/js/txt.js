@@ -154,14 +154,25 @@
   }
 
 
+
+  function getAllTag(ctx){
+    return $(ctx.config.editor).find('h1 , h2 ,h3 ,h4 ,h5 ,H1 ,H2 , H3 ,H4 ,H5')
+  }
+
+
+
+
   function initPreview(ctx){
-    var preView = $('<div id="preview" class="txt-preview"></div>');
-    preView.html('<div class="txt-h1">qwwqqw</div>'
-      + '<div class="txt-h2">sdsds</div>' 
-      + '<div class="txt-h3">cxcx</div>'
-      + '<div class="txt-h4">的实打实大声道是打算打算的撒</div>'
-      + '<div class="txt-h5">呈现出新程序重新出现 呈现出想重新出现</div>'
-    );
+    $('#txt-preview').remove()
+    var preView = $('<div id="txt-preview" class="txt-preview"></div>');
+    var tags = getAllTag(ctx)
+    var _html = ''
+    tags.map(function(index , item){
+      _html += "<div class='txt-" + item.tagName.toLowerCase() + " '>" + $(item).text() + "</div>"
+      console.log(item);
+      console.log(item.tagName.toLowerCase());
+    })
+    preView.html(_html);
     $('#mdcontent').after(preView)
   }
 
@@ -268,7 +279,7 @@
     // 检查 lineBreakReg
     addListener(ctx, editor, 'keydown', function(e) {
       console.log(`keydown `);
-
+      initPreview(ctx)
       if (e.which == 13) {
       root.doBackList.unshift($('#mdcontent').html());
       // console.log(doBackList);
