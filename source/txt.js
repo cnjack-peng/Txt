@@ -646,7 +646,7 @@ export default StyleSheet.create({
         "fontWeight": "bold",
         "display": "inline-block",
         "position": "relative",
-        "top": -26,
+        "top": -20,
         "left": "45%"
     },
     "txt-placeholder:after": {
