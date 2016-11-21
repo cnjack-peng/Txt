@@ -167,19 +167,15 @@
       tags.map(function(index , item){
         $(item).attr('id','previewtoHref'+index)
         _html += "<a href='#" + ('previewtoHref'+index) + "' class='txt-" + item.tagName.toLowerCase() + " '>" + $(item).text() + "</a>"
-        console.log(item);
-        console.log(item.tagName.toLowerCase());
       })
       preView.html(_html);
-      $('#mdcontent').after(preView)
+      $(ctx.config.editor).after(preView)
       $("ol").each(function () {
           var $that = $(this);
           $($that).find('li').each(function (index) {
               $(this).addClass("liNum-" + index)
           })
       });
-
-
     }.bind(this),0)
 
   }
@@ -192,7 +188,6 @@
     if (!ctx._toolbar) {
       var toolList = ctx.config.list;
       utils.forEach(toolList, function (name) {
-        console.warn(name);
         var klass = 'txt-icon icon-' + name;
         var title = ctx.config.titles[name] || '';
         icons += `<i class="${klass}" data-action="${name}" title="${title}"></i>`
@@ -288,7 +283,7 @@
       console.log(`keydown `);
       initPreview(ctx)
       if (e.which == 13) {
-      root.doBackList.unshift($('#mdcontent').html());
+      root.doBackList.unshift($(ctx.config.editor).html());
       // console.log(doBackList);
     }
 
@@ -659,37 +654,38 @@
 
   Txt.prototype.doMd = function(ctx) {
     !mdSwitch && (mdSwitchHtml = $(ctx.config.editor).html())
+    $(ctx.config.editor).attr('contenteditable' , mdSwitch)
     $(ctx.config.editor).html(mdSwitch ? mdSwitchHtml : ctx.toMd())
     mdSwitch = !mdSwitch
   };
 
 
-  Txt.prototype.doBack = function() {
+  Txt.prototype.doBack = function(ctx) {
     var doBackList = root.doBackList
     var doGoList = root.doGoList
     console.log(doBackList);
     if (!doBackList[0]){
-      $('#mdcontent').html('')
+      $(ctx.config.editor).html('')
         return
       }
     var data = doBackList.shift()
     doGoList.unshift(data)
     console.warn(data);
-    $('#mdcontent').html(data)
-    $('#mdcontent').focus()
+    $(ctx.config.editor).html(data)
+    $(ctx.config.editor).focus()
     console.log(doBackList);
     console.log(doGoList);
   };
 
-  Txt.prototype.doGo = function(){
+  Txt.prototype.doGo = function(ctx){
     var doBackList = root.doBackList
     var doGoList = root.doGoList
     console.log(!doGoList[0]);
     if (!doGoList[0]){
       return
     }
-    $('#mdcontent').html(doGoList[0])
-    $('#mdcontent').focus()
+    $(ctx.config.editor).html(doGoList[0])
+    $(ctx.config.editor).focus()
     var data = doGoList.shift()
     doBackList.unshift(data)
   }
@@ -704,11 +700,11 @@
 
     switch (name) {
       case 'doback':
-        this.doBack()
+        this.doBack(this)
         return
         break;
       case 'dogo':
-        this.doGo()
+        this.doGo(this)
         return
         break;
         case 'md':

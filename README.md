@@ -2,10 +2,7 @@
 新生代  轻量级web富文本框 , 使用简单。
 
 
-
-
-
-### 直接上预览图
+### Directly on the preview
 
 
 ### Features
@@ -28,7 +25,12 @@ Move forward
 
 
 
-### Directly on the preview
+
+<code>
+execcommand
+
+</code>
+### 直接上预览图
 
 
 ![demo](./Txt.gif)
@@ -50,3 +52,7 @@ Move forward
 12. 图片添加
 
 ```
+
+
+
+### 参数解析
