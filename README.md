@@ -69,15 +69,40 @@ Move forward
 
 ### 参数解析
 
-$(document).ready(function(){
-  var options = {
-      editor: document.getElementById('mdcontent'), // 编辑区域
-    class: 'txt', // 编辑区域样式
-      debug: true, //是否开启console debug
-      textarea: '<textarea name="content"></textarea>', //不支持contenteditable 的使用
-      linksInNewWindow: true ,
-      preview : true, // 右边预览
-      menuDom : 'nav2' // 工具区域的元素
-    }
-    var editorMd = new Txt(options);
-});
+      $(document).ready(function(){
+        var options = {
+          editor: document.getElementById('mdcontent'), // 编辑区域
+          class: 'txt', // 编辑区域样式
+          debug: true, //是否开启console debug
+          textarea: '<textarea name="content"></textarea>', //不支持contenteditable 的使用
+          linksInNewWindow: true ,
+          preview : true, // 右边预览
+          menuDom : 'nav2' // 工具区域的元素
+        }
+      var editorMd = new Txt(options);
+      });
+
+
+
+#Txt
+
+シンプルな軽量なWebのリッチテキストボックスの新世代は、使用しています。
+
+
+###特長
+
+```
+  1.フォワード
+  2.戻ります
+  3. BLOCKQUOTE
+  4. H1、H2、H3、H4、H5
+  5.通常のテキスト
+  6.順序付きリスト
+  7.順不同リスト
+  8.インデント
+  9、太字、衰退、イタリック
+  10.テキストリンク
+  11. MDビュー
+  12.写真を追加
+
+```
