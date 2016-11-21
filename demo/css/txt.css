@@ -185,3 +185,45 @@
 
 .txt-placeholder:after { position: absolute; top: 0; left: 0; content: attr(data-placeholder); color: #fff; cursor: text; }
 nav .tools-height i { height: 55px;  line-height: 60px;}
+.txt-preview {
+  position: fixed;
+  width: 120px;
+  height: 400px;
+  background-color: rgba(25, 15, 15, 0.39);
+  top: 31px;
+  right: 0px;
+  padding: 10px 10px 10px 0;
+
+}
+.txt-preview div {
+  font : 12px/24px 'Aril';
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.txt-preview .txt-h1 {
+  margin-left: 8px;
+  color: #E1BBFD;
+  width: 122px;
+}
+.txt-preview .txt-h2 {
+  margin-left: 16px;
+  color: #FDFF7C;
+  width: 114px;
+}
+.txt-preview .txt-h3 {
+  margin-left: 24px;
+  color: #C7FF81;
+  width: 106px;
+}
+.txt-preview .txt-h4 {
+  margin-left: 32px;
+  color: #88C8EC;
+  width: 98px;
+}
+.txt-preview .txt-h5 {
+  margin-left: 40px;
+  color: #FFC3E9;
+  width: 90px;
+
+}

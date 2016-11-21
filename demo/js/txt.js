@@ -155,8 +155,13 @@
 
 
   function initPreview(ctx){
-    var preView = $('<div></div>');
-    preView.html('<div>qwwqqw</div>');
+    var preView = $('<div id="preview" class="txt-preview"></div>');
+    preView.html('<div class="txt-h1">qwwqqw</div>'
+      + '<div class="txt-h2">sdsds</div>' 
+      + '<div class="txt-h3">cxcx</div>'
+      + '<div class="txt-h4">的实打实大声道是打算打算的撒</div>'
+      + '<div class="txt-h5">呈现出新程序重新出现 呈现出想重新出现</div>'
+    );
     $('#mdcontent').after(preView)
   }
 

@@ -574,5 +574,48 @@ export default StyleSheet.create({
     "nav tools-height i": {
         "height": 55,
         "lineHeight": 60
+    },
+    "txt-preview": {
+        "position": "fixed",
+        "width": 120,
+        "height": 400,
+        "backgroundColor": "rgba(25, 15, 15, 0.39)",
+        "top": 31,
+        "right": 0,
+        "paddingTop": 10,
+        "paddingRight": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 0
+    },
+    "txt-preview div": {
+        "font": "12px/24px 'Aril'",
+        "whiteSpace": "nowrap",
+        "textOverflow": "ellipsis",
+        "overflow": "hidden"
+    },
+    "txt-preview txt-h1": {
+        "marginLeft": 8,
+        "color": "#E1BBFD",
+        "width": 122
+    },
+    "txt-preview txt-h2": {
+        "marginLeft": 16,
+        "color": "#FDFF7C",
+        "width": 114
+    },
+    "txt-preview txt-h3": {
+        "marginLeft": 24,
+        "color": "#C7FF81",
+        "width": 106
+    },
+    "txt-preview txt-h4": {
+        "marginLeft": 32,
+        "color": "#88C8EC",
+        "width": 98
+    },
+    "txt-preview txt-h5": {
+        "marginLeft": 40,
+        "color": "#FFC3E9",
+        "width": 90
     }
 });
