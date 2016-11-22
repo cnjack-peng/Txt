@@ -33,19 +33,18 @@ Move forward
 ![demo](./Txt.gif)
 
 
-    $(document).ready(function(){
-      var options = {
-          editor: document.getElementById('mdcontent'), // Edit the area
-          class: 'txt', // Edit the  style
-          debug: true, //switch console debug
-          textarea: '<textarea name="content"></textarea>', // The use of contenteditable is not supported or not
-
-          linksInNewWindow: true ,
-          preview : true, // preview area
-          menuDom : 'nav2' // The elements of the tool area
-        }
-        var editorMd = new Txt(options);
+    $(function(){
+        var mdArea = new Txt({
+        editor: document.getElementById('mdcontent'), // Edit area
+        class: 'txt', // Edit area style
+        linksInNewWindow: true ,
+        textarea: '<textarea name="content"></textarea>', // Does not support contenteditable
+        preview : true, // Right Preview
+        menuDom : 'nav2', // Elements of the tool area
+        debug: true, // switch console debug
     });
+
+    })
 
 
 
@@ -77,19 +76,18 @@ Move forward
 
 ### 参数解析
 
-      $(document).ready(function(){
-        var options = {
-          editor: document.getElementById('mdcontent'), // 编辑区域
-          class: 'txt', // 编辑区域样式
-          debug: true, //是否开启console debug
-          textarea: '<textarea name="content"></textarea>', //不支持contenteditable 的使用
-          linksInNewWindow: true ,
-          preview : true, // 右边预览
-          menuDom : 'nav2' // 工具区域的元素
-        }
-      var editorMd = new Txt(options);
-      });
+    $(function(){
+        var mdArea = new Txt({
+        editor: document.getElementById('mdcontent'), // 编辑区域
+        class: 'txt', // 编辑区域样式
+        linksInNewWindow: true ,
+        textarea: '<textarea name="content"></textarea>', //不支持contenteditable 的使用
+        preview : true, // 右边预览
+        menuDom : 'nav2', // 工具区域的元素
+        debug: true, //是否开启console debug
+        });
 
+        })
 
 
 #Txt
