@@ -4,6 +4,9 @@
 
 # Txt
 
+supported Markdown and Html
+
+
 ### Directly on the preview
 
 ### Features
@@ -43,6 +46,7 @@ Move forward
         }
         var editorMd = new Txt(options);
     });
+
 
 
 
@@ -110,3 +114,8 @@ Move forward
   12.写真を追加
 
 ```
+
+
+### License
+
+Licensed under MIT.
